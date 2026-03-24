@@ -117,7 +117,7 @@ router.post('/', async (req, res, next) => {
         .insert([req.body])
         .select()
         if(error) throw error;
-        res.status(201).json(data[0]);
+        req.status(201).json(data[0]);
 
     }catch (err) {
         next(err);
